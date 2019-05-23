@@ -1,5 +1,5 @@
 MOSTLYCLEANFILES = *.elc
-EMACSLOADPATH=
+EMACSLOADPATH=:/home/rocky/.emacs.d/elpa/test-simple-20170527.1532/:/home/rocky/.emacs.d/elpa/realgud-20190504.1238/:/home/rocky/.emacs.d/elpa/load-relative-20170526.1010/:/home/rocky/.emacs.d/elpa/loc-changes-20160801.1708/
 
 short:
 	$(MAKE) 2>&1 >/dev/null | ruby $(top_srcdir)/make-check-filter.rb
@@ -19,6 +19,6 @@ short:
 	  EMACSLOADPATH=$(EMACSLOADPATH) $(EMACS) --batch \
 	    $(AM_ELCFLAGS) $(ELCFLAGS) \
 	    $$am__subdir_includes -L $(builddir) -L $(srcdir) \
-	    --eval "(defun byte-compile-dest-file (f) \"$@\")" \
+	    --eval "(defun byte-compile-dest-file-function (f) \"$@\")" \
 	    --eval "(unless (byte-compile-file \"$<\") (kill-emacs 1))"; \
 	else :; fi

@@ -1,4 +1,6 @@
 ;; Copyright (C) 2019 Free Software Foundation, Inc
+;; Author: Rocky Bernstein <rocky@gnu.org>
+
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
@@ -15,6 +17,7 @@
 (eval-when-compile (require 'cl-lib))
 
 (require 'realgud)
+(require 'load-relative)
 
 (declare-function realgud:expand-file-name-if-exists 'realgud-core)
 (declare-function realgud-lang-mode? 'realgud-lang)

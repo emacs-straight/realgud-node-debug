@@ -1,6 +1,6 @@
 ;; track-mode.el ---
 ;; Copyright (C) 2019 Free Software Foundation, Inc
-;; Author: Rocky Bernstein
+;; Author: Rocky Bernstein <rocky@gnu.org>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -22,6 +22,7 @@
 (declare-function realgud:remove-ansi-schmutz 'realgud:utils)
 
 (require 'realgud)
+(require 'load-relative)
 
 (require-relative-list '("core" "init") "realgud:node-debug-")
 
